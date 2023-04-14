@@ -39,6 +39,7 @@ public class Ogrenci extends Kisi {
         return "Ogrenci{" +
                 "ogrenciNo=" + ogrenciNo +
                 ", sinif='" + sinif + '\'' +
+                super.toString()+
                 '}';
     }
 }
