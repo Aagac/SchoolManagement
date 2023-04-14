@@ -40,7 +40,7 @@ public class Ogretmen extends Kisi{
     public String toString() {
         return "Ogretmen{" +
                 "bolum='" + bolum + '\'' +
-                ", sicilNo='" + sicilNo + '\'' +
+                ", sicilNo='" + sicilNo + '\'' + super.toString()+
                 '}';
     }
 }
