@@ -5,7 +5,8 @@ public class Ogrenci extends Kisi{
     private int ogrenciNo;
     private String sinif;
 
-    public Ogrenci(String name, String lastName, String kimlikNo, int yas, int ogrenciNo, String sinif) {
+    public Ogrenci(String name, String lastName, String kimlikNo,
+                   int yas, int ogrenciNo, String sinif) {
         super(name, lastName, kimlikNo, yas);
         this.ogrenciNo = ogrenciNo;
         this.sinif = sinif;
@@ -39,6 +40,7 @@ public class Ogrenci extends Kisi{
         return "Ogrenci{" +
                 "ogrenciNo=" + ogrenciNo +
                 ", sinif='" + sinif + '\'' +
+                super.toString()+
                 '}';
     }
 }
