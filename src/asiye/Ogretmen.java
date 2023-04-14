@@ -5,7 +5,7 @@ public class Ogretmen extends  Kisi {
     private  String bolum;
     private  String sicilNo;//A1205
 
-    public Ogretmen(String name, String lastName, String kimlikNo, int yas, String bolum) {
+    public Ogretmen(String name, String lastName, String kimlikNo, int yas, String bolum,String sicilNo) {
         super(name, lastName, kimlikNo, yas);
         this.bolum = bolum;
         this.sicilNo=sicilNo;
@@ -40,6 +40,7 @@ public class Ogretmen extends  Kisi {
         return "Ogretmen{" +
                 "bolum='" + bolum + '\'' +
                 ", sicilNo='" + sicilNo + '\'' +
+                super.toString()+
                 '}';
     }
 }
