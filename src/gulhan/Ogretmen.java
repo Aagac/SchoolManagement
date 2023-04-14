@@ -1,3 +1,5 @@
+package gulhan;
+
 import gulhan.Kisi;
 
 public class Ogretmen extends Kisi {
@@ -38,7 +40,8 @@ public class Ogretmen extends Kisi {
 
     @Override
     public String toString() {
-        return   "Brans   = " + brans + "\n" + "" +
+        return   super.toString()+"\n"+
+                "Brans   = " + brans + "\n" + "" +
                  "SicilNo = " + sicilNo;
     }
 }
