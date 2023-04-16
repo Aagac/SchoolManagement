@@ -2,7 +2,7 @@ package asiye;
 
 public class Ogretmen extends Kisi {
     private String bolum;
-    private String sicilNo;
+    private String sicilNo; //A1205
 
     public Ogretmen(String name, String lastName, String kimlikNo, int yas, String bolum, String sicilNo) {
         super(name, lastName, kimlikNo, yas);
@@ -19,7 +19,7 @@ public class Ogretmen extends Kisi {
     }
 
     public String getBolum() {
-        return this.bolum;
+        return bolum;
     }
 
     public void setBolum(String bolum) {
@@ -27,15 +27,19 @@ public class Ogretmen extends Kisi {
     }
 
     public String getSicilNo() {
-        return this.sicilNo;
+        return sicilNo;
     }
 
     public void setSicilNo(String sicilNo) {
         this.sicilNo = sicilNo;
     }
 
+    @Override
     public String toString() {
-        String var10000 = this.bolum;
-        return "Ogretmen{bolum='" + var10000 + "', sicilNo='" + this.sicilNo + "'" + super.toString() + "}";
+        return "Ogretmen{" +
+                "bolum='" + bolum + '\'' +
+                ", sicilNo='" + sicilNo + '\'' +
+                super.toString()+
+                '}';
     }
 }
