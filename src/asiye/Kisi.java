@@ -17,7 +17,7 @@ public class Kisi {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
@@ -25,7 +25,7 @@ public class Kisi {
     }
 
     public String getLastName() {
-        return this.lastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
@@ -33,18 +33,24 @@ public class Kisi {
     }
 
     public String getKimlikNo() {
-        return this.kimlikNo;
+        return kimlikNo;
     }
 
     public int getYas() {
-        return this.yas;
+        return yas;
     }
 
     public void setYas(int yas) {
         this.yas = yas;
     }
 
+    @Override
     public String toString() {
-        return "Kisi{name='" + this.name + "', lastName='" + this.lastName + "', kimlikNo='" + this.kimlikNo + "', yas=" + this.yas + "}";
+        return "Kisi{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", kimlikNo='" + kimlikNo + '\'' +
+                ", yas=" + yas +
+                '}';
     }
 }

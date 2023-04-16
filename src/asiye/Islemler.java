@@ -5,39 +5,57 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-    public class Islemler {
+import static asiye.Runner.run;
+
+public class Islemler {
+
         static String kisiTuru;
-        static Scanner scn;
-        static List<Kisi> ogrenciList;
-        static List<Kisi> ogretmenList;
+        static Scanner scn = new Scanner(System.in);
+        static List<Kisi> ogrenciList = new ArrayList<>();
+        static List<Kisi> ogretmenList = new ArrayList<>();
 
         public Islemler() {
         }
 
         public void islemMenusu() {
-            System.out.println("sectigin kisi turu ***" + kisiTuru + "******asagidaki islemlerden hangisini yapmak istiyorsun ");
-            System.out.println("============= İŞLEMLER =============\n\t\t 1-EKLEME\n\t\t 2-ARAMA\n\t\t 3-LİSTELEME\n\t\t 4-SİLME\n\t\t 5-ANA MENÜ\n");
+            System.out.println("sectigin kisi turu ***" + kisiTuru + "******+" +
+                    "asagidaki islemlerden hangisini yapmak istiyorsun ");
+
+            System.out.println("============= İŞLEMLER =============\n" +
+                    "\t\t 1-EKLEME\n" +
+                    "\t\t 2-ARAMA\n" +
+                    "\t\t 3-LİSTELEME\n" +
+                    "\t\t 4-SİLME\n" +
+                    "\t\t 5-ANA MENÜ\n");
+
             int secilenIslem = scn.nextInt();
             switch (secilenIslem) {
                 case 1:
-                    this.ekleme();
-                    this.islemMenusu();
+                    ekleme();
+                    islemMenusu();
                     break;
+
                 case 2:
-                    this.islemMenusu();
+                    //arama();
+                    islemMenusu();
                     break;
+
                 case 3:
-                    this.islemMenusu();
+                    //listeleme();
+                   islemMenusu();
                     break;
+
                 case 4:
-                    this.islemMenusu();
+                   //silme();
+                    islemMenusu();
                     break;
                 case 5:
-                    Runner.run.anaMenu();
+                   run.anaMenu();
                     break;
                 default:
                     System.out.println("yanlis bir tuslama yaptiniz tekrar deneyiniz");
-                    this.islemMenusu();
+                  islemMenusu();
+                  break;
             }
 
         }
@@ -45,41 +63,55 @@ import java.util.Scanner;
         private void ekleme() {
             System.err.println("*** " + kisiTuru + "*** ekleme sayfasina hosgeldiniz");
             scn.nextLine();
+
             System.out.println("adini gir");
             String adi = scn.nextLine();
+
             System.out.println("soyadini gir");
             String soyad = scn.next();
-            System.out.println("kimlikNo gir");
+
+            System.out.println("kimlik no gir");
             String kimlikNo = scn.next();
+
             System.out.println("yasini gir");
             int yas = scn.nextInt();
-            String sinif;
-            if (kisiTuru.equalsIgnoreCase("OGRENCI")) {
+
+            if (kisiTuru.equalsIgnoreCase("OGRENCI")) {// ogrenci icin
                 System.out.println("ogrenci no gir");
                 int ogrenciNo = scn.nextInt();
+
                 System.out.println("sinif gir");
-                sinif = scn.next();
-                Ogrenci ogrenci = new Ogrenci(adi, soyad, kimlikNo, yas, ogrenciNo, sinif);
+                String sinif = scn.next();
+
+                Ogrenci ogrenci = new Ogrenci(adi, soyad, kimlikNo, yas,
+                        ogrenciNo, sinif);
+
                 ogrenciList.add(ogrenci);
                 System.out.println("ogrenci = " + ogrenci);
                 System.out.println("ogrenciList = " + ogrenciList);
-            } else {
+
+
+            } else { //ogretmen icin
+
                 System.out.println("bolum gir");
-                String bolum = scn.nextLine();
+                String bolum = scn.next();
+
                 System.out.println("sicilNo gir");
-                sinif = scn.next();
-                Ogretmen ogretmen = new Ogretmen(adi, soyad, kimlikNo, yas, bolum, sinif);
-                System.out.println("ogretmen = " + ogretmen);
+                String sicilNo = scn.next();
+
+                Ogretmen ogretmen = new Ogretmen(adi, soyad, kimlikNo, yas,
+                        bolum, sicilNo);
+
                 ogretmenList.add(ogretmen);
+
+                System.out.println("ogretmen = " + ogretmen);
+                System.out.println("ogretmenList = " + ogretmenList);
+
             }
 
         }
 
-        static {
-            scn = new Scanner(System.in);
-            ogrenciList = new ArrayList();
-            ogretmenList = new ArrayList();
-        }
+
     }
 
 

@@ -4,7 +4,9 @@ public class Ogrenci extends Kisi {
     private int ogrenciNo;
     private String sinif;
 
-    public Ogrenci(String name, String lastName, String kimlikNo, int yas, int ogrenciNo, String sinif) {
+    public Ogrenci(String name, String lastName, String kimlikNo,
+                   int yas, int ogrenciNo, String sinif) {
+
         super(name, lastName, kimlikNo, yas);
         this.ogrenciNo = ogrenciNo;
         this.sinif = sinif;
@@ -19,7 +21,7 @@ public class Ogrenci extends Kisi {
     }
 
     public int getOgrenciNo() {
-        return this.ogrenciNo;
+        return ogrenciNo;
     }
 
     public void setOgrenciNo(int ogrenciNo) {
@@ -27,15 +29,19 @@ public class Ogrenci extends Kisi {
     }
 
     public String getSinif() {
-        return this.sinif;
+        return sinif;
     }
 
     public void setSinif(String sinif) {
         this.sinif = sinif;
     }
-
+    @Override
     public String toString() {
-        int var10000 = this.ogrenciNo;
-        return "Ogrenci{ogrenciNo=" + var10000 + ", sinif='" + this.sinif + "'" + super.toString() + "}";
+        return "Ogrenci{" +
+                "ogrenciNo=" + ogrenciNo +
+                ", sinif='" + sinif + '\'' +
+                super.toString()+
+                '}';
+
     }
 }
