@@ -24,6 +24,8 @@ public class Runner extends Islemler {
 
 
         Scanner input = new Scanner(System.in);
+        System.out.println();
+        System.out.print("Seciminiz  : ");
         String secim = input.next().toUpperCase();
 
         switch (secim) {

@@ -1,6 +1,6 @@
 package gulhan;
 
-import gulhan.Kisi;
+
 
 public class Ogrenci extends Kisi {
 
@@ -39,8 +39,8 @@ public class Ogrenci extends Kisi {
 
     @Override
     public String toString() {
-        return   super.toString()+"\n"+
-                "OgrenciNo = " + ogrenciNo + "\n"+
+        return   super.toString()+"   "+
+                "OgrenciNo = " + ogrenciNo + "    "+
                         "Sinif     = " + sinif;
     }
 }

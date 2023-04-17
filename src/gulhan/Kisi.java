@@ -47,9 +47,9 @@ public class Kisi {
 
     @Override
     public String toString() {
-        return  "Name      = " + name + "\n" +
-                "lastName  = " + lastName + "\n" +
-                "KimlikNo  = " + kimlikNo + "\n" +
-                "Yas       = " + yas;
+        return  "Name      = " + name + "   " +
+                "lastName  = " + lastName + "   " +
+                "KimlikNo  = " + kimlikNo + "   " +
+                "Yas       = " + yas + "   ";
     }
 }
