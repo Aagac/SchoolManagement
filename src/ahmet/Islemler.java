@@ -30,11 +30,11 @@ public class Islemler extends Kisi {
                 islemMenusu();
                 break;
             case 2:
-                arama();
+//                arama();
                 islemMenusu();
                 break;
             case 3:
-                listeleme();
+//                listeleme();
                 islemMenusu();
                 break;
             case 4:
@@ -54,54 +54,34 @@ public class Islemler extends Kisi {
 
     }
 
-    private void listeleme() {
-        System.out.println("hangi listeyi görmek istiyorsun Ogrenci icin 1 Ogretmen icin 2");
-        int secim = scn.nextInt();
-        switch (secim) {
-            case 1:
-                System.out.println("ogrenciList = " + ogrenciList);
-                listeleme();
-                break;
-            case 2:
-                System.out.println("ogretmenList = " + ogretmenList);
-                listeleme();
-                break;
-            default:
-                System.out.println("hatali secim");
-                listeleme();
-                break;
-        }
-    }
 
 
-    private void arama() {
-        System.out.println("hangi classda arama yapmak istiyorsun Ogrenci icin 1 Ogretmen icin 2");
-        int secim = scn.nextInt();
-        switch (secim) {
-            case 1:
-                System.out.println("hangi ismi aramak istiyorsun");
-                String isim = scn.next().toUpperCase();
-                for (int i = 0; i < ogrenciList.size(); i++) {
-                    ogrenciList.get(i).equals(ogr.getName());
-                }
-                break;
-            case 2:
-                System.out.println("hangi ismi aramak istiyorsun");
-                String isim1 = scn.next().toUpperCase();
-                boolean sonuc1 = ogretmenList.contains(isim1);
-                if (sonuc1) {
-                    System.out.println("Aradiginiz isim listede mevcut");
-                } else System.out.println("kayitlarimizda böyle bir isim yok tekrar arama yapiniz");
-                arama();
-                break;
-            default:
-                System.out.println("hatali giris yapildi");
-                arama();
-                break;
 
-        }
+//    private void arama() {
+//        System.out.println("hangi classda arama yapmak istiyorsun Ogrenci icin 1 Ogretmen icin 2");
+//        int secim = scn.nextInt();
+//        switch (secim) {
+//            case 1:
+//                System.out.println("hangi ismi aramak istiyorsun");
+//                String isim = scn.next().toUpperCase();
+//                for (int i = 0; i < ogrenciList.size(); i++) {
+//                    ogrenciList.get(i).equals(ogr.getName());
+//                }
+//                break;
+//            case 2:
+//                System.out.println("hangi ismi aramak istiyorsun");
+//                String isim1 = scn.next().toUpperCase();
+//                boolean sonuc1 = ogretmenList.contains(isim1);
+//                if (sonuc1) {
+//                    System.out.println("Aradiginiz isim listede mevcut");
+//                } else System.out.println("kayitlarimizda böyle bir isim yok tekrar arama yapiniz");
+//                arama();
+//                break;
+//            default:
+//                System.out.println("hatali giris yapildi");
+//                arama();
+//                break;
 
-    }
 
     private void ekleme() {
         System.err.println("*** " + kisiTuru + " *** ekleme sayfasina hosgeldiniz");
