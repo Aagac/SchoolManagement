@@ -36,7 +36,7 @@ public class Islemler {
                     break;
 
                 case 2:
-                    //arama();
+                    arama();
                     islemMenusu();
                     break;
 
@@ -59,8 +59,54 @@ public class Islemler {
             }
 
         }
+    public static final String W = "\u001B[37m";
+    public static final String R = "\u001B[31m";
+    public static final String G = "\u001B[32m";
+    public static final String Y = "\u001B[33m";
+    public static final String B = "\u001B[34m";
 
-        private void ekleme() {
+
+    private void arama() {
+
+
+        System.err.println(R+"*** " +R+ kisiTuru + "*** ekleme sayfasina hosgeldiniz"+R);
+boolean flag = true;//bulumama ihtimaline karsi create edildi
+        if (kisiTuru.equalsIgnoreCase("OGRENCI")){
+            scn.nextLine();
+            System.out.println("kimlik no gir");
+            String kimlikNo= scn.next();
+
+
+            for (Kisi each : ogrenciList){
+
+                if (each.getKimlikNo().equalsIgnoreCase(kimlikNo)){
+                    System.out.println("aradigin ögrenci adi "+R+each.getName());
+                    flag =false;  //burda aradigin kisiyi buldun artik arama demis oluyoruz false cekerek
+                }   //buraya else yazip     if (flag) System.out.println("404 not found orgenci bulunamadi");de yapabilirdik mantik ayni
+
+            }
+            if (flag) System.out.println("404 not found orgenci bulunamadi");
+
+
+
+        }else {
+            System.out.println("kimlik no gir");
+            String kimlikNo= scn.next();
+            for (Kisi each : ogretmenList){
+
+                if (each.getKimlikNo().equalsIgnoreCase(kimlikNo)){
+                    System.out.println("aradigin ögrenci adi "+R+each.getName());
+                    flag =false;
+                }
+
+            }
+            if (flag) System.out.println("404 not found orgenci bulunamadi");
+
+        }
+
+    }
+
+    private void ekleme() {
             System.err.println("*** " + kisiTuru + "*** ekleme sayfasina hosgeldiniz");
             scn.nextLine();
 
