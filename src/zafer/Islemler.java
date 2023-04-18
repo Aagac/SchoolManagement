@@ -7,6 +7,13 @@ import java.util.Scanner;
 import static zafer.Runner.run;
 
 public class Islemler {
+        //renk kodlari
+        public static final String W = "\u001B[37m";
+        public static final String R = "\u001B[31m";
+        public static final String G = "\u001B[32m";
+        public static final String Y = "\u001B[33m";
+        public static final String B = "\u001B[34m";
+
 
     static String kisiTuru;
     static Scanner scn = new Scanner(System.in);
@@ -31,7 +38,7 @@ public class Islemler {
                 islemMenusu();
                 break;
             case 2:
-              //  arama();
+                arama();
                 islemMenusu();
                 break;
             case 3:
@@ -50,6 +57,41 @@ public class Islemler {
                 break;
 
         }
+    }
+
+    private void arama() {
+        System.err.println(R+"*** "+R+ W+kisiTuru+ W+" *** ekleme sayfasina hosgeldiniz"+R);
+        boolean flag = true;//bulamama ihtimaline karsi create ediildi
+
+        if (kisiTuru.equalsIgnoreCase("OGRENCI")){
+           // scn.nextLine();
+            System.out.println("kimlik no gir");
+            String kimlikNo=scn.next();
+
+            for (Kisi each : ogrenciList   ) {
+                    if (each.getKimlikNo().equals(kimlikNo)){
+                        System.out.println("aradigin ogrenci adi"+R+each.getName());
+                        flag = false;
+                    }
+            }
+            if (flag) System.out.println("404 not found ogrenci bulunamadi");
+
+        }else {
+            System.out.println("kimlik no gir");
+            String kimlikNo=scn.next();
+            for (Kisi each : ogretmenList   ) {
+                if (each.getKimlikNo().equals(kimlikNo)){
+                    System.out.println("aradigin ogrenci adi"+R+each.getName());
+                    flag = false;
+                }
+            }
+            if (flag) System.out.println("404 not found ogrenci bulunamadi");
+
+
+        }
+
+
+
     }
 
     private void ekleme() {
