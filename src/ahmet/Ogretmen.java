@@ -3,7 +3,7 @@ package ahmet;
 public class Ogretmen extends Kisi {
 
     private String bolum;
-    private String sicilNo;
+    private String sicilNo; //A1205
 
     public Ogretmen(String name, String lastName, String kimlikNo, int yas, String bolum, String sicilNo) {
         super(name, lastName, kimlikNo, yas);
@@ -16,8 +16,7 @@ public class Ogretmen extends Kisi {
         this.sicilNo = sicilNo;
     }
 
-    public Ogretmen() {
-
+    public Ogretmen( ) {
     }
 
     public String getBolum() {
@@ -39,8 +38,9 @@ public class Ogretmen extends Kisi {
     @Override
     public String toString() {
         return "Ogretmen{" +
+                super.toString()+
                 "bolum='" + bolum + '\'' +
-                ", sicilNo='" + sicilNo + '\'' +super.toString()+
+                ", sicilNo='" + sicilNo + '\'' +
                 '}';
     }
 }

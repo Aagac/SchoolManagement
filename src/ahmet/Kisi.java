@@ -1,6 +1,7 @@
 package ahmet;
 
-public class Kisi {
+//@Entity class data base e bagladigiiz clsass
+public class Kisi {//POJO class
 
     private String name;
     private String lastName;

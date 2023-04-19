@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Runner extends Islemler{
 
-    static Runner run=new Runner();
+    public static Runner run=new Runner();
 
     static {
         Ogrenci ogrenci = new Ogrenci("ali","john","1234",12,
