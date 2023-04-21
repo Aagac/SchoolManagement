@@ -1,7 +1,6 @@
 package zafer;
 
-//@Entity class data base e bagladigiiz clsass
-public class Kisi {//POJO class
+public class Kisi {
 
     private String name;
     private String lastName;
