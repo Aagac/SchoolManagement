@@ -1,12 +1,14 @@
 package asiye;
 
+
+
 public class Ogrenci extends Kisi {
+
     private int ogrenciNo;
     private String sinif;
 
     public Ogrenci(String name, String lastName, String kimlikNo,
                    int yas, int ogrenciNo, String sinif) {
-
         super(name, lastName, kimlikNo, yas);
         this.ogrenciNo = ogrenciNo;
         this.sinif = sinif;
@@ -16,7 +18,6 @@ public class Ogrenci extends Kisi {
         this.ogrenciNo = ogrenciNo;
         this.sinif = sinif;
     }
-
     public Ogrenci() {
     }
 
@@ -35,13 +36,16 @@ public class Ogrenci extends Kisi {
     public void setSinif(String sinif) {
         this.sinif = sinif;
     }
+
     @Override
     public String toString() {
         return "Ogrenci{" +
+                super.toString()+
                 "ogrenciNo=" + ogrenciNo +
                 ", sinif='" + sinif + '\'' +
                 super.toString()+
                 '}';
-
     }
 }
+
+
